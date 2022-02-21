@@ -1,0 +1,26 @@
+---
+title: "mtcars Homework"
+author: "Kenny Nguyen"
+date: "2/21/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r mtcars}
+summary(mtcars)
+cyl_4 <- mtcars[mtcars$cyl == 4,]
+cyl_6 <- mtcars[mtcars$cyl == 6,]
+print(cyl_4)
+print(cyl_6)
+
+
+```{r mtcars, echo=FALSE}
+plot(cyl_4$mpg, cyl_4$disp, ylab = "Engine Displacement", xlab = "mpg", main = "Engines with 4 Cylinders")
+plot(cyl_6$mpg, cyl_6$disp, ylab = "Engine Displacement", xlab = "mpg", main = "Engines with 6 Cylinders")
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
